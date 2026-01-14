@@ -1,0 +1,51 @@
+.container {
+  width: 420px;
+  border: 1px solid #999;
+  padding: 5px;
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.title {
+  text-align: center;
+  color: blue;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid #999;
+  padding: 4px;
+}
+
+.input-row td {
+  border: none;
+}
+
+select {
+  width: 60px;
+}
+
+button {
+  padding: 3px 8px;
+  font-size: 13px;
+}
+
+.am-lich-title {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+.label {
+  width: 40%;
+}
+
+.value {
+  color: red;
+}
