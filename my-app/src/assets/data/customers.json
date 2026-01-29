@@ -1,0 +1,47 @@
+[
+  {
+    "CustomterTypeName": "1 - VIP",
+    "Customers": [
+      {
+        "Id": "Cust123",
+        "Name": "Obama",
+        "Email": "obama@gmail.com",
+        "Age": 67,
+        "Image": "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTxpigd7j7jgeH0gtsQAf9Sn54vTVz0bV3epiWgeowWL7yHrrIX3WGVRTS1boONHX_zsyzb6YIHIH18VWunVxQ9Mk_EKrLa4WRyDftYgrgA30r9Rhq4-2y78LWjj0M5htMK8lwNW1RDV6Fp&s=19"
+      },
+      {
+        "Id": "Cust456",
+        "Name": "Kim Jong Un",
+        "Email": "un@gmail.com",
+        "Age": 38,
+        "Image": "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTyhgwFBBuEqiLB5BAjQR4hCDCoJYefwwYtelRMap_8uXFoyisZLRptYiqLuXet0zX9X9Z4z_UAxYbYCcyD9Pm8i2iEe1ljOiYaXfrieWMo7cAQCVQZQ8iYoWz5pDdJFY67SAOckK9jv-c&s=19"
+      },
+      {
+        "Id": "Cust789",
+        "Name": "Putin",
+        "Email": "putin@gmail.com",
+        "Age": 77,
+        "Image": "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQMSADqMwBW_WXqhLtBQ48HAF3Yw-0wVlSXSW3j3FLMPyWOR8vG9dtG6qBVzjdpV-V-ONlFlOFy7qVllxiGzBNljK_Q2U7yd1QrTt8t_6dTqB6LwERSYvSA8G3AJzXSSPQcH3cjwNa3VKM_&s=19"
+      }
+    ]
+  },
+  {
+    "CustomterTypeName": "2 - Normal",
+    "Customers": [
+      {
+        "Id": "Cust000",
+        "Name": "Cẩm Êlas",
+        "Email": "hoalan@gmail.com",
+        "Age": 76,
+        "Image": "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTO9Fa0RaDqfwwUo9WzZKgSK20Y0awn-AQbOmBIwu9-fooYpwC-VrUSbKEWQxn4nT_R0bK4i1OscfRCYlpINXXJjSXewsqYhqCVENJtDlcAXEbnL0WwtjaBsoRjFDlt2_Gkq0AOvl98QDo&s=19"
+      },
+      {
+        "Id": "k234111399",
+        "Name": "Tấn Minh",
+        "Email": "tanminh@gmail.com",
+        "Age": 62,
+        "Image": "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTyhgwFBBuEqiLB5BAjQR4hCDCoJYefwwYtelRMap_8uXFoyisZLRptYiqLuXet0zX9X9Z4z_UAxYbYCcyD9Pm8i2iEe1ljOiYaXfrieWMo7cAQCVQZQ8iYoWz5pDdJFY67SAOckK9jv-c&s=19"
+      }
+    ]
+  }
+]
