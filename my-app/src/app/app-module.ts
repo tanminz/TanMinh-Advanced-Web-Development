@@ -1,13 +1,12 @@
 import { NgModule, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { About } from './about/about';
 import { Contact } from './contact/contact';
 import { Ex3 } from './ex3/ex3';
-
 import { Learnbinding } from './learnbinding/learnbinding';
 import { Ptb1 } from './ptb1/ptb1';
 import { Ptb2 } from './ptb2/ptb2';
@@ -19,7 +18,11 @@ import { Listcustomer2 } from './listcustomer2/listcustomer2';
 import { Customerdetail } from './customerdetail/customerdetail';
 import {HttpClientModule} from '@angular/common/http';
 import { Exercise14 } from './exercise14/exercise14';
-import { Listcustomers } from './listcustomers/listcustomers';
+import { LoginComponent } from './login-component/login-component';
+import { CourseRegistration } from './course-registration/course-registration';
+import { Mathcomponent } from './mathcomponent/mathcomponent';
+import { FakeProductComponent } from './fake-product/fake-product';
+import { CoinDeskComponent } from './coindesk/coindesk';
 
 
 @NgModule({
@@ -36,13 +39,18 @@ import { Listcustomers } from './listcustomers/listcustomers';
     Lunaryear,
     Customer,
     Listcustomer2,
-    Listcustomers,
-    Customerdetail
+    Customerdetail,
+    LoginComponent,
+    CourseRegistration,
+    Mathcomponent,
+    FakeProductComponent,
+    CoinDeskComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [

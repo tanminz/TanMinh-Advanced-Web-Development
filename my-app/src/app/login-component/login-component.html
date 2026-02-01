@@ -1,0 +1,22 @@
+<div class="login-box">
+  <h2>Login to the Teacher</h2>
+
+  <div class="login-content">
+    <div class="logo">
+      <img src="../../assets/fis.png" alt="FIS Logo" />
+    </div>
+    <form [formGroup]="loginForm" class="login-form">
+      <input type="email" placeholder="Email" formControlName="email" />
+      <input type="password" placeholder="Password" formControlName="password" />
+
+      <label class="remember">
+        Remember me <input type="checkbox" formControlName="remember" />
+      </label>
+
+      <button type="button" (click)="onLogin()">Log in</button>
+    </form>
+  </div>
+
+  <p class="text-error">{{ resultJson }}</p>
+  <p class="text-error">{{ errorMsg }}</p>
+</div>

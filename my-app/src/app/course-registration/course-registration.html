@@ -1,0 +1,67 @@
+<div class="box">
+  <h2>Đăng ký khóa học</h2>
+
+  <form [formGroup]="form">
+    <label>Tên:</label>
+    <input type="text" formControlName="name" />
+    <div *ngIf="f['name'].touched && f['name'].invalid" class="error">
+      Name is required
+    </div>
+
+    <label>Email:</label>
+    <input type="email" formControlName="email" />
+    <div *ngIf="f['email'].touched && f['email'].errors" class="error">
+      <div *ngIf="f['email'].errors['required']">
+        Email is required
+      </div>
+      <div *ngIf="f['email'].errors['email']">
+        Invalid email format
+      </div>
+    </div>
+
+    <label>Điện thoại:</label>
+    <input type="text" formControlName="phone" />
+    <div *ngIf="f['phone'].touched && f['phone'].errors" class="error">
+      <div *ngIf="f['phone'].errors['required']">
+        Phone number is required
+      </div>
+      <div *ngIf="f['phone'].errors['pattern']">
+        Phone number must be 10 digits and start with 0
+      </div>
+    </div>
+
+    <label>Chọn khóa học:</label>
+    <select formControlName="course">
+      <option value="">-- Select course --</option>
+      <option>Ruby</option>
+      <option>Java</option>
+      <option>Python</option>
+      <option>Angular</option>
+    </select>
+    <div *ngIf="f['course'].touched && f['course'].invalid" class="error">
+      Please select a course
+    </div>
+
+    <label>Chọn ca học:</label>
+    <div class="radio-group">
+      <label>
+        <input type="radio" value="sang" formControlName="time" /> Sáng
+      </label>
+      <label>
+        <input type="radio" value="toi" formControlName="time" /> Tối
+      </label>
+    </div>
+
+    <div class="checkbox-group">
+      <input type="checkbox" formControlName="agree" />
+      <span>Đồng ý với điều khoản</span>
+    </div>
+    <div *ngIf="f['agree'].touched && f['agree'].invalid" class="error">
+      You must agree to the terms
+    </div>
+
+    <button type="button" (click)="onSubmit()">Submit</button>
+  </form>
+
+  <p class="result">{{ result }}</p>
+</div>

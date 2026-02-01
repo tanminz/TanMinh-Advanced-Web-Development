@@ -1,0 +1,16 @@
+input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  margin-right: 6px;
+  padding: 4px 10px;
+  background: #f2f5ff;
+  border: 1px solid #b5c4f0;
+  cursor: pointer;
+}
+
+.error {
+  background-color: #ffe3e3;
+}

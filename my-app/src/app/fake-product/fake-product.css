@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+body {
+  background-color: #d5d2d2;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+}
+
+.card:hover {
+  box-shadow: 5px 6px 6px 2px #e9ecef;
+  transform: scale(1.01);
+}
+
+.img-container {
+  position: relative;
+}
+
+.img-scale {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+}
+
+.first {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.percent {
+  background: #ffc107;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.wishlist i {
+  color: #dc3545;
+}
+
+.product-detail-container {
+  padding: 12px;
+}
+
+.ratings i {
+  color: #ffc107;
+}
+
+.count {
+  font-size: 12px;
+  color: #999;
+}
+
+label.radio span {
+  height: 25px;
+  width: 25px;
+  line-height: 25px;
+  display: inline-block;
+  text-align: center;
+  border: 2px solid #dc3545;
+  color: #dc3545;
+  border-radius: 50%;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+label.radio input:checked + span {
+  border-color: #dc3545;
+  background-color: #dc3545;
+  color: #fff;
+}

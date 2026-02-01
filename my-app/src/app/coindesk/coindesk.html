@@ -1,0 +1,44 @@
+<h2 class="text-center text-white bg-dark p-3">Bitcoin Price Index (BPI)</h2>
+
+<p *ngIf="errorMessage" class="text-danger text-center">{{ errorMessage }}</p>
+
+<div class="container" *ngIf="tickers$ | async as data">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="card p-3">
+        <h4 class="mb-3">Alternative.me Ticker</h4>
+
+        <table class="table table-bordered">
+          <thead class="thead-dark">
+            <tr>
+              <th>Name</th>
+              <th>Symbol</th>
+              <th>Price (USD)</th>
+              <th>Market Cap (USD)</th>
+              <th>1h %</th>
+              <th>24h %</th>
+              <th>7d %</th>
+              <th>Updated</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of data">
+              <td>{{ item.name }}</td>
+              <td>{{ item.symbol }}</td>
+              <td>{{ item.price_usd }}</td>
+              <td>{{ item.market_cap_usd }}</td>
+              <td>{{ item.percent_change_1h }}</td>
+              <td>{{ item.percent_change_24h }}</td>
+              <td>{{ item.percent_change_7d }}</td>
+              <td>{{ item.last_updated }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="text-muted small mb-0">
+          Auto refresh every {{ refreshSeconds }} seconds.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<table border="1" cellpadding="8" cellspacing="0">
+  <tr>
+    <td>a:</td>
+    <td>
+      <input type="text" [(ngModel)]="a" [class.error]="!isNumber(a)">
+    </td>
+  </tr>
+  <tr>
+    <td>b:</td>
+    <td>
+      <input type="text" [(ngModel)]="b" [class.error]="!isNumber(b)">
+    </td>
+  </tr>
+  <tr>
+    <td>c:</td>
+    <td>
+      <input type="text" [(ngModel)]="c" [class.error]="!isNumber(c)">
+    </td>
+  </tr>
+  <tr>
+    <td>Result:</td>
+    <td>
+      <input type="text" [value]="result" readonly>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <button (click)="calcMax()">MAX</button>
+      <button (click)="calcMin()">MIN</button>
+      <button (click)="calcSin()">sin(a)</button>
+      <button (click)="calcCos()">cos(a)</button>
+      <button (click)="calcPow()">a^b</button>
+    </td>
+  </tr>
+</table>
