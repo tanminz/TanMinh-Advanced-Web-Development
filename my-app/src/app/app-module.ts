@@ -2,9 +2,8 @@ import { NgModule, provideBrowserGlobalErrorListeners, provideZonelessChangeDete
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing-module';
+import { AppRoutingModule, RoutingComponents } from './app-routing-module';
 import { App } from './app';
-import { About } from './about/about';
 import { Contact } from './contact/contact';
 import { Ex3 } from './ex3/ex3';
 import { Learnbinding } from './learnbinding/learnbinding';
@@ -22,7 +21,22 @@ import { LoginComponent } from './login-component/login-component';
 import { CourseRegistration } from './course-registration/course-registration';
 import { Mathcomponent } from './mathcomponent/mathcomponent';
 import { FakeProductComponent } from './fake-product/fake-product';
+import { FakeProductBasicComponent } from './fake-product-basic/fake-product-basic';
 import { CoinDeskComponent } from './coindesk/coindesk';
+import { ServiceProductImageEventComponent } from './service-product-image-event/service-product-image-event';
+import { ServiceProductImageEventDetailComponent } from './service-product-image-event-detail/service-product-image-event-detail';
+import { Customer1Component } from './customer-1/customer-1';
+import { Customer2Component } from './customer-2/customer-2';
+import { Customer3Component } from './customer-3/customer-3';
+import { Product3Component } from './product-3/product-3';
+import { Product4Component } from './product-4/product-4';
+import { InternalApiComponent } from './internal-api/internal-api';
+import { HtmlDomComponent } from './html-dom/html-dom';
+import { AspLanguageComponent } from './asp-language/asp-language';
+import { About } from './about/about';
+import { ProductDetailComponent } from './product-detail/product-detail';
+import { Listcustomers } from './listcustomers/listcustomers';
+import { Listcustomerba } from './listcustomerba/listcustomerba';
 
 
 @NgModule({
@@ -43,8 +57,23 @@ import { CoinDeskComponent } from './coindesk/coindesk';
     LoginComponent,
     CourseRegistration,
     Mathcomponent,
+    FakeProductBasicComponent,
     FakeProductComponent,
-    CoinDeskComponent
+    CoinDeskComponent,
+    ServiceProductImageEventComponent,
+    ServiceProductImageEventDetailComponent,
+    Customer1Component,
+    Customer2Component,
+    Customer3Component,
+    Product3Component,
+    Product4Component,
+    ProductDetailComponent,
+    Listcustomers,
+    Listcustomerba,
+    InternalApiComponent,
+    HtmlDomComponent,
+    AspLanguageComponent,
+    ...RoutingComponents
   ],
   imports: [
     BrowserModule,

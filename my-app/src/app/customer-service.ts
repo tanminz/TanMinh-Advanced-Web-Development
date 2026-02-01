@@ -20,6 +20,10 @@ export class CustomerService {
     return this.http.get<any[]>('assets/data/customers.json');
   }
 
+  get_all_customers() {
+    return this.customers;
+  }
+
   filter_customer_by_age(fromAge: number, toAge: number): any[] {
     return this.customers.filter((c: { age: number }) => c.age >= fromAge && c.age <= toAge);
   }
