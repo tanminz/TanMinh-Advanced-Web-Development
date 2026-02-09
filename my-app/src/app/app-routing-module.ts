@@ -21,6 +21,11 @@ import { HtmlDomComponent } from './html-dom/html-dom';
 import { AspLanguageComponent } from './asp-language/asp-language';
 import { About } from './about/about';
 import { ProductDetailComponent } from './product-detail/product-detail';
+import { FileUploadComponent } from './file-upload/file-upload';
+import { BookComponent } from './book-component/book-component';
+import { BookDetailComponent } from './book-detail-component/book-detail-component';
+import { NewBookComponent } from './new-book-component/new-book-component';
+import { BookEditComponent } from './book-edit-component/book-edit-component';
 
 const routes: Routes = [
   { path: 'ex21', component: LoginComponent },
@@ -42,7 +47,12 @@ const routes: Routes = [
   { path: 'san-pham-1/:id', component: ProductDetailComponent },
   { path: 'san-pham-3', component: Product3Component },
   { path: 'san-pham-4', component: Product4Component },
-  { path: 'ex39', component: InternalApiComponent },
+  { path: 'ex39', component: BookComponent },
+  { path: 'ex41', component: BookDetailComponent },
+  { path: 'ex41/:id', component: BookDetailComponent },
+  { path: 'ex43', component: NewBookComponent },
+  { path: 'ex50/:id', component: BookEditComponent },
+  { path: 'ex49', component: FileUploadComponent },
   { path: 'html-dom', component: HtmlDomComponent },
   { path: 'ngon-ngu-asp', component: AspLanguageComponent },
   { path: 'gioi-thieu', component: About },
@@ -61,6 +71,11 @@ export const RoutingComponents = [
   InternalApiComponent,
   HtmlDomComponent,
   AspLanguageComponent,
+  FileUploadComponent,
+  BookComponent,
+  BookDetailComponent,
+  NewBookComponent,
+  BookEditComponent,
 ];
 
 @NgModule({

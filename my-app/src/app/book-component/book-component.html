@@ -1,0 +1,50 @@
+<div class="page">
+  <div class="header">
+    <div class="exercise">Exercise 50: Restful API self-study</div>
+    <div class="title">QUẢN LÝ THÔNG TIN SÁCH</div>
+  </div>
+
+  <div class="toolbar">
+    <a class="create" routerLink="../ex43">Create New</a>
+    <span class="error" *ngIf="errMessage">{{ errMessage }}</span>
+  </div>
+
+  <table class="book-table">
+    <thead>
+      <tr>
+        <th>Tên sách</th>
+        <th>Giá bán</th>
+        <th>Mô tả</th>
+        <th>Ảnh bìa</th>
+        <th>Ngày cập nhật</th>
+        <th>Số lượng tồn</th>
+        <th>MaCD</th>
+        <th>MaNXB</th>
+        <th class="actions">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of (books$ | async)">
+        <td class="name">{{ book.BookName }}</td>
+        <td class="price">{{ book.Price }}</td>
+        <td class="desc">{{ getDescription(book) }}</td>
+        <td class="img-cell">
+          <img
+            src="http://localhost:3000/images/{{ book.Image }}"
+            width="60"
+            height="60"
+          />
+        </td>
+        <td>{{ getUpdateDate(book) }}</td>
+        <td>{{ getQuantity(book) }}</td>
+        <td>{{ getMaCD(book) }}</td>
+        <td>{{ getMaNXB(book) }}</td>
+        <td class="actions">
+          <a [routerLink]="['/ex50', book.BookId]">Edit</a><br />
+          <a [routerLink]="['/ex41', book.BookId]">Details</a><br />
+          <a (click)="deleteBook(book.BookId)">Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

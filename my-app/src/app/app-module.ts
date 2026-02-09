@@ -37,6 +37,11 @@ import { About } from './about/about';
 import { ProductDetailComponent } from './product-detail/product-detail';
 import { Listcustomers } from './listcustomers/listcustomers';
 import { Listcustomerba } from './listcustomerba/listcustomerba';
+import { FileUploadComponent } from './file-upload/file-upload';
+import { BookComponent } from './book-component/book-component';
+import { BookDetailComponent } from './book-detail-component/book-detail-component';
+import { NewBookComponent } from './new-book-component/new-book-component';
+import { BookEditComponent } from './book-edit-component/book-edit-component';
 
 
 @NgModule({
@@ -70,6 +75,11 @@ import { Listcustomerba } from './listcustomerba/listcustomerba';
     ProductDetailComponent,
     Listcustomers,
     Listcustomerba,
+    FileUploadComponent,
+    BookComponent,
+    BookDetailComponent,
+    NewBookComponent,
+    BookEditComponent,
     InternalApiComponent,
     HtmlDomComponent,
     AspLanguageComponent,
