@@ -1,0 +1,25 @@
+<div class="payment-page">
+  <div class="payment-card">
+    <div class="card-header">
+      <img src="https://upload.wikimedia.org/wikipedia/vi/f/fe/MoMo_Logo.png" alt="MoMo" class="momo-logo">
+      <h1>Thanh toán MoMo</h1>
+      <p class="subtitle">Nhập số tiền và bấm thanh toán</p>
+    </div>
+
+    <div class="card-body">
+      <div class="form-group">
+        <label for="amount">Số tiền (VNĐ)</label>
+        <input id="amount" type="number" [(ngModel)]="amount" min="10000" placeholder="50000" class="input-amount">
+      </div>
+
+      <p *ngIf="errorMsg" class="error-alert">{{ errorMsg }}</p>
+
+      <button class="momo-btn" (click)="payWithMoMo()" [disabled]="loading">
+        <span *ngIf="!loading">Thanh toán ngay</span>
+        <span *ngIf="loading" class="btn-loading">
+          <span class="spinner"></span> Đang xử lý...
+        </span>
+      </button>
+    </div>
+  </div>
+</div>

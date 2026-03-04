@@ -1,0 +1,131 @@
+.result-container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(145deg, #f8f4f8 0%, #efe8f0 100%);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.result-card {
+  width: 100%;
+  max-width: 440px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08), 0 2px 10px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  text-align: center;
+}
+
+.result-card.success {
+  border-top: 4px solid #2e7d32;
+}
+
+.result-card.error {
+  border-top: 4px solid #c62828;
+}
+
+.result-icon {
+  margin: 2rem auto 1rem;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+
+.success .result-icon {
+  background: linear-gradient(135deg, #43a047 0%, #2e7d32 100%);
+}
+
+.error .result-icon {
+  background: linear-gradient(135deg, #e53935 0%, #c62828 100%);
+}
+
+.result-content {
+  padding: 0 2rem 1rem;
+}
+
+.result-content h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.35rem;
+  color: #333;
+}
+
+.message {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.details {
+  background: #f8f5f8;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.detail-row:last-child {
+  margin-bottom: 0;
+}
+
+.detail-row strong {
+  color: #333;
+}
+
+.result-actions {
+  padding: 1.25rem 2rem 2rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.result-actions button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.2s;
+}
+
+.result-actions button:hover {
+  transform: translateY(-1px);
+}
+
+.back-btn {
+  background: #ece8ec;
+  color: #444;
+}
+
+.back-btn:hover {
+  background: #e0dce0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.retry-btn {
+  background: linear-gradient(135deg, #ae1476 0%, #a50064 100%);
+  color: #fff;
+}
+
+.retry-btn:hover {
+  box-shadow: 0 4px 16px rgba(165, 0, 100, 0.3);
+}

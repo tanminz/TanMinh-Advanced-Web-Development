@@ -42,6 +42,12 @@ import { BookComponent } from './book-component/book-component';
 import { BookDetailComponent } from './book-detail-component/book-detail-component';
 import { NewBookComponent } from './new-book-component/new-book-component';
 import { BookEditComponent } from './book-edit-component/book-edit-component';
+import { Bookupdate } from './bookupdate/bookupdate';
+import { FashionComponent } from './fashion/fashion.component';
+import { PaymentComponent } from './payment/payment.component';
+import { PaymentResultComponent } from './payment-result/payment-result.component';
+import { PaymentHistoryComponent } from './payment-history/payment-history.component';  
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -83,13 +89,18 @@ import { BookEditComponent } from './book-edit-component/book-edit-component';
     InternalApiComponent,
     HtmlDomComponent,
     AspLanguageComponent,
-    ...RoutingComponents
+    ...RoutingComponents,
+    Bookupdate,
+    PaymentComponent,
+    PaymentResultComponent,
+    PaymentHistoryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    CommonModule,
     HttpClientModule
   ],
   providers: [

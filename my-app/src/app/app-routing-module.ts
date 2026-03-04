@@ -26,6 +26,10 @@ import { BookComponent } from './book-component/book-component';
 import { BookDetailComponent } from './book-detail-component/book-detail-component';
 import { NewBookComponent } from './new-book-component/new-book-component';
 import { BookEditComponent } from './book-edit-component/book-edit-component';
+import { FashionComponent } from './fashion/fashion.component';
+import { PaymentComponent } from './payment/payment.component';
+import { PaymentResultComponent } from './payment-result/payment-result.component';
+import { PaymentHistoryComponent } from './payment-history/payment-history.component';
 
 const routes: Routes = [
   { path: 'ex21', component: LoginComponent },
@@ -53,9 +57,14 @@ const routes: Routes = [
   { path: 'ex43', component: NewBookComponent },
   { path: 'ex50/:id', component: BookEditComponent },
   { path: 'ex49', component: FileUploadComponent },
+  { path: 'ex53', component: FashionComponent },
+  { path: 'momo', component: PaymentComponent },
+  { path: 'payment-result', component: PaymentResultComponent },
+  { path: 'momo-history', component: PaymentHistoryComponent },
   { path: 'html-dom', component: HtmlDomComponent },
   { path: 'ngon-ngu-asp', component: AspLanguageComponent },
   { path: 'gioi-thieu', component: About },
+  { path: 'history', component: PaymentHistoryComponent },
 ];
 
 export const RoutingComponents = [
@@ -76,6 +85,10 @@ export const RoutingComponents = [
   BookDetailComponent,
   NewBookComponent,
   BookEditComponent,
+  FashionComponent,
+  PaymentComponent,
+  PaymentResultComponent,
+  PaymentHistoryComponent,
 ];
 
 @NgModule({

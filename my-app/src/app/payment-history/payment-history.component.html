@@ -1,0 +1,94 @@
+<h1 style="color:red">Lịch sử thanh toán</h1>
+<div class="history-page">
+  <div class="history-card">
+
+    <!-- HEADER -->
+    <div class="history-header">
+      <div>
+        <h1>Lịch sử thanh toán</h1>
+        <p class="history-sub">
+          Danh sách các giao dịch đã thực hiện qua MoMo
+        </p>
+      </div>
+
+      <button class="btn-refresh"
+              (click)="loadPayments()"
+              [disabled]="loading">
+        {{ loading ? 'Đang tải...' : 'Làm mới' }}
+      </button>
+    </div>
+
+    <!-- BODY -->
+    <div class="history-body">
+
+      <!-- LOADING -->
+      <div *ngIf="loading" class="loading-wrap">
+        <div class="spinner-large"></div>
+        <p>Đang tải dữ liệu...</p>
+      </div>
+
+      <!-- ERROR -->
+      <div *ngIf="!loading && error" class="error-msg">
+        {{ error }}
+      </div>
+
+      <!-- CONTENT -->
+      <div *ngIf="!loading && !error">
+
+        <!-- CÓ DỮ LIỆU -->
+        <div *ngIf="payments && payments.length > 0; else emptyTpl" class="table-wrap">
+          <table class="payment-table">
+            <thead>
+              <tr>
+                <th>Mã đơn hàng</th>
+                <th>Số tiền</th>
+                <th>Trạng thái</th>
+                <th>Ngày tạo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let p of payments">
+                <td class="col-order">
+                  {{ p.orderId }}
+                </td>
+
+                <td class="col-amount">
+                  {{ p.amount | number }} đ
+                </td>
+
+                <td>
+                  <span class="badge"
+                        [ngClass]="{
+                          'badge-success': p.status === 'paid',
+                          'badge-fail': p.status === 'failed',
+                          'badge-pending': p.status === 'pending'
+                        }">
+                    {{
+                      p.status === 'paid' ? 'Đã thanh toán' :
+                      p.status === 'failed' ? 'Thất bại' :
+                      'Đang xử lý'
+                    }}
+                  </span>
+                </td>
+
+                <td class="col-date">
+                  {{ p.createdAt ? (p.createdAt | date:'short') : '-' }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- KHÔNG CÓ DỮ LIỆU -->
+        <ng-template #emptyTpl>
+          <div class="empty-state">
+            <span class="empty-icon">📭</span>
+            <p>Chưa có giao dịch nào.</p>
+          </div>
+        </ng-template>
+
+      </div>
+
+    </div>
+  </div>
+</div>

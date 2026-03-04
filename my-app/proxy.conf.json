@@ -54,5 +54,19 @@
     "secure": false,
     "changeOrigin": true,
     "logLevel": "debug"
+  },
+  {
+    "context": ["/payment/momo", "/payment/result", "/payment/momo/ipn"],
+    "target": "http://localhost:3000",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  {
+    "context": ["/payments"],
+    "target": "http://localhost:3000",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
   }
 ]
