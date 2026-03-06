@@ -1,0 +1,24 @@
+{
+  "name": "my-server-mongodb",
+  "version": "1.0.0",
+  "description": "MongoDB API server for FashionData",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "seed-user": "node seed-user.js",
+    "seed-product": "node seed-product.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "mongodb": "^7.1.0",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}

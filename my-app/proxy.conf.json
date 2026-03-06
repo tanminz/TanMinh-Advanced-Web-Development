@@ -68,5 +68,12 @@
     "secure": false,
     "changeOrigin": true,
     "logLevel": "debug"
+  },
+  {
+    "context": ["/auth", "/api"],
+    "target": "http://localhost:3002",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
   }
 ]

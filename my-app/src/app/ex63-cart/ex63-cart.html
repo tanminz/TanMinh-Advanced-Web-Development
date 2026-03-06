@@ -1,0 +1,50 @@
+<div class="ex63-cart">
+  <section class="page-header">
+    <h1 class="page-title">Shopping cart</h1>
+  </section>
+  @if (loading) {
+    <p class="loading-text">Loading cart...</p>
+  } @else if (cart.length === 0) {
+    <div class="empty-cart">
+      <p>Cart is empty.</p>
+      <button class="btn btn-continue" (click)="continueShopping()">Continue shopping</button>
+    </div>
+  } @else {
+    <div class="cart-table-wrap">
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th class="th-remove">Remove</th>
+            <th class="th-sku">SKU</th>
+            <th class="th-img">Image</th>
+            <th class="th-product">Product</th>
+            <th class="th-price">Price</th>
+            <th class="th-qty">Qty</th>
+            <th class="th-total">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (item of cart; track item._id) {
+            <tr>
+              <td><input type="checkbox" [(ngModel)]="item.remove" class="cb-remove"></td>
+              <td>{{ item.sku || '-' }}</td>
+              <td><img [src]="item.image || 'assets/placeholder.png'" alt="" class="cart-img"></td>
+              <td class="td-name">{{ item.name }}</td>
+              <td>${{ item.price | number:'1.2-2' }}</td>
+              <td><input type="number" [(ngModel)]="item.qty" min="1" class="qty-input"></td>
+              <td class="td-total">${{ itemTotal(item) | number:'1.2-2' }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+    <div class="cart-footer">
+      <p class="grand-total">Grand Total: ${{ grandTotal() | number:'1.2-2' }}</p>
+      <div class="cart-actions">
+        <button class="btn btn-update" (click)="updateCart()">Update shopping cart</button>
+        <button class="btn btn-continue" (click)="continueShopping()">Continue shopping</button>
+        <button class="btn btn-checkout" (click)="checkout()">Confirm payment</button>
+      </div>
+    </div>
+  }
+</div>

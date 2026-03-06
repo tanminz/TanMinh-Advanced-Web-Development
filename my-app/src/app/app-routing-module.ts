@@ -30,9 +30,15 @@ import { FashionComponent } from './fashion/fashion.component';
 import { PaymentComponent } from './payment/payment.component';
 import { PaymentResultComponent } from './payment-result/payment-result.component';
 import { PaymentHistoryComponent } from './payment-history/payment-history.component';
+import { Ex61Login } from './ex61-login/ex61-login';
+import { Ex63ProductsComponent } from './ex63-products/ex63-products';
+import { Ex63CartComponent } from './ex63-cart/ex63-cart';
 
 const routes: Routes = [
   { path: 'ex21', component: LoginComponent },
+  { path: 'ex61', component: Ex61Login },
+  { path: 'ex62', component: Ex63ProductsComponent },
+  { path: 'ex63', component: Ex63CartComponent },
   { path: 'ex22', component: CourseRegistration },
   { path: 'ex24', component: Mathcomponent },
   { path: 'ex26', component: FakeProductBasicComponent },

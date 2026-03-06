@@ -48,6 +48,9 @@ import { PaymentComponent } from './payment/payment.component';
 import { PaymentResultComponent } from './payment-result/payment-result.component';
 import { PaymentHistoryComponent } from './payment-history/payment-history.component';  
 import { CommonModule } from '@angular/common';
+import { Ex61Login } from './ex61-login/ex61-login';
+import { Ex63ProductsComponent } from './ex63-products/ex63-products';
+import { Ex63CartComponent } from './ex63-cart/ex63-cart';
 
 
 @NgModule({
@@ -93,7 +96,10 @@ import { CommonModule } from '@angular/common';
     Bookupdate,
     PaymentComponent,
     PaymentResultComponent,
-    PaymentHistoryComponent
+    PaymentHistoryComponent,
+    Ex61Login,
+    Ex63ProductsComponent,
+    Ex63CartComponent
   ],
   imports: [
     BrowserModule,
